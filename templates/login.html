@@ -1,0 +1,5 @@
+<!doctype html><html lang="id"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Login Presensi</title>
+<style>body{font:16px Arial;background:#f3f5f9;color:#172337;margin:0}main{max-width:360px;margin:10vh auto;background:white;padding:28px;border-radius:12px}input,button{box-sizing:border-box;width:100%;padding:12px;margin:8px 0;border:1px solid #bdc7d6;border-radius:6px}button{background:#245ac6;color:white;cursor:pointer}.error{color:#a82020}small{line-height:1.6}</style>
+<main><h1>Presensi QR</h1><p>Masuk sebagai dosen atau mahasiswa.</p>{% if error %}<p class="error">{{ error }}</p>{% endif %}
+<form method="post"><input type="hidden" name="csrf" value="{{ session.csrf }}"><label>ID dosen atau NIM<input name="uid" required autocomplete="username"></label><label>Password<input name="password" type="password" required autocomplete="current-password"></label><button>Masuk</button></form>
+<small>Akun demo: dosen / 23001 / 23002 / 23003<br>Password semua akun: belajar123</small></main></html>
